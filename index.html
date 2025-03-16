@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethan Pedersen</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Ethan Pedersen</h1>
+      <nav>
+        <a href="index.html">Home</a>
+      </nav>
+    </header>
+    <main>
+      <section id="about">
+        <img
+          src="public/Headshots-med.jpg"
+          alt="Ethan Pedersen"
+          style="width: 200px; height: 300px"
+        />
+        <div class="about-text">
+          <p>
+            I'm currently a software developer at bioMerieux developing
+            applications for the production and testing of in-vitro diagnostic
+            medical devices. I love being on the cutting edge of new technology
+            related to biology and solving the complex problems that come with
+            it.
+
+            <br />
+            Prior to my current position, I worked on e-commerce sites for small
+            to mid-size companies and custom CRM software. I have a Bachelors of
+            Computer Science from the University of Utah, and I continue to look
+            for opportunities to continue learning.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script>
+    fetch("footer.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.body.insertAdjacentHTML("beforeend", data);
+      });
+  </script>
+</html>

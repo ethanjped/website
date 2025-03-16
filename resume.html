@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="resume.html">Resume</a>
+            <a href="projects.html">Projects</a>
+        </nav>
+    </header>
+    <main>
+        <section id="resume">
+            <h2>Resume</h2>
+            <p>Download my resume: <a href="your-resume.pdf" target="_blank">Download PDF</a> (replace with your resume file)</p>
+            <h3>Experience</h3>
+            <p>... (Add your work experience details)</p>
+            <h3>Education</h3>
+            <p>... (Add your education details)</p>
+            <h3>Skills</h3>
+            <p>... (List your skills)</p>
+        </section>
+    </main>
+</body>
+</html>
+<script>
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.body.insertAdjacentHTML('beforeend', data);
+        });
+</script>
