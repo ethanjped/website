@@ -1,48 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ethan Pedersen</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Ethan Pedersen</h1>
-      <nav>
-        <a href="index.html">Home</a>
-      </nav>
-    </header>
-    <main>
-      <section id="about">
-        <img
-          src="public/Headshots-med.jpg"
-          alt="Ethan Pedersen"
-          style="width: 200px; height: 300px"
-        />
-        <div class="about-text">
-          <p>
-            I'm currently a software developer at bioMerieux developing
-            applications for the production and testing of in-vitro diagnostic
-            medical devices. I love being on the cutting edge of new technology
-            related to biology and solving the complex problems that come with
-            it.
+---
+layout: default
+title: Home
+---
 
-            <br />
-            Prior to my current position, I worked on e-commerce sites for small
-            to mid-size companies and custom CRM software. I have a Bachelors of
-            Computer Science from the University of Utah, and I continue to look
-            for opportunities to continue learning.
-          </p>
-        </div>
-      </section>
-    </main>
-  </body>
-  <script>
-    fetch("footer.html")
-      .then((response) => response.text())
-      .then((data) => {
-        document.body.insertAdjacentHTML("beforeend", data);
-      });
-  </script>
-</html>
+<section id="about">
+    <img class="about-image" src="assets/images/pinebasin1.jpg" alt="Ethan Pedersen" />
+    <div class="about-text">
+      <p>
+        Hi, I'm Ethan. I'm a software engineer, currently at bioMérieux building
+        applications for the production and testing of in-vitro diagnostic medical
+        devices. Prior to this, I worked on e-commerce sites for small businesses and on CRM software. I continue to look
+        for new learning opportunities.
+        <br />
+        <br />
+        I also really enjoy running and road racing, and I hope to write about that and any other stray thoughts here.
+      </p>
+      <p>
+        You can reach me and see more of what I do on: 
+      </p>
+      <ul class="social-links">
+        {% for item in site.data.socials %}
+          <li>
+            <a href="{{ item.url }}" target="_blank">{{ item.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </section>

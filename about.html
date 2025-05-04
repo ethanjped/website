@@ -1,0 +1,32 @@
+---
+layout: default
+title: about
+---
+
+<h1>about me</h1>
+
+
+<section id="about">
+  <img class="about-image" src="assets/images/pinebasin1.jpg" alt="Ethan Pedersen" />
+  <div class="about-text">
+    <p>
+      Hi, I'm Ethan. I'm a software engineer, currently at bioMérieux building
+      applications for the production and testing of in-vitro diagnostic medical
+      devices. Prior to this, I worked on e-commerce sites for small businesses and on CRM software. I continue to look
+      for new learning opportunities.
+      <br />
+      <br />
+      I also really enjoy running and road racing, and I hope to write about that and any other stray thoughts here.
+    </p>
+    <p>
+      You can reach me and see more of what I do on: 
+    </p>
+    <ul class="social-links">
+      {% for item in site.data.socials %}
+        <li>
+          <a href="{{ item.url }}" target="_blank">{{ item.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
