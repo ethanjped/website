@@ -7,13 +7,16 @@ title: Home
     <img class="about-image" src="assets/images/pinebasin1.jpg" alt="Ethan Pedersen" />
     <div class="about-text">
       <p>
-        Hi, I'm Ethan. I'm a software engineer, currently at bioMérieux building
+        Hi, I'm Ethan. I'm a software engineer, currently at bioMérieux in Salt Lake City building
         applications for the production and testing of in-vitro diagnostic medical
         devices. Prior to this, I worked on e-commerce sites for small businesses and on CRM software. I continue to look
         for new learning opportunities.
         <br />
         <br />
-        I also really enjoy running and road racing, and I hope to write about that and any other stray thoughts here.
+        In the spring of 2023 I graduated from the University of Utah with a Bachelor's degree in Computer Science. 
+        <br />
+        <br />
+        I also really enjoy running, and I hope to write about that and any other stray thoughts here in the future. 
       </p>
       <p>
         You can reach me and see more of what I do on: 
@@ -21,7 +24,7 @@ title: Home
       <ul class="social-links">
         {% for item in site.data.socials %}
           <li>
-            <a href="{{ item.url }}" target="_blank">{{ item.name }}</a>
+            <a href="{{ item.link }}" target="_blank">{{ item.name }}</a>
           </li>
         {% endfor %}
       </ul>
